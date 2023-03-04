@@ -9,7 +9,7 @@ interface Props {
 
 export function Button({ title, color, ...rest }: Props) {
   return (
-    <Container>
+    <Container {...rest} color={color}>
       <Title>{title}</Title>
     </Container>
   );
