@@ -35,6 +35,11 @@ import {
   DateInfo,
   DateTitle,
   DateValue,
+  RentalPrice,
+  RentalPriceLabel,
+  RentalPriceDetails,
+  RentalPriceQuota,
+  RentalPriceTotal,
 } from "./styles";
 
 export function SchedulingDetails() {
@@ -83,7 +88,7 @@ export function SchedulingDetails() {
           </CalendarIcon>
           <DateInfo>
             <DateTitle>DE</DateTitle>
-            <DateValue selected={false}>18/06/2021</DateValue>
+            <DateValue>18/06/2021</DateValue>
           </DateInfo>
 
           <Feather
@@ -94,10 +99,19 @@ export function SchedulingDetails() {
 
           <DateInfo>
             <DateTitle>DE</DateTitle>
-            <DateValue selected={false}>18/06/2021</DateValue>
+            <DateValue>18/06/2021</DateValue>
           </DateInfo>
         </RentalPeriod>
+
+        <RentalPrice>
+          <RentalPriceLabel>TOTAL</RentalPriceLabel>
+          <RentalPriceDetails>
+            <RentalPriceQuota>R$ 580 x3 diárias</RentalPriceQuota>
+            <RentalPriceTotal>R$ 2.900</RentalPriceTotal>
+          </RentalPriceDetails>
+        </RentalPrice>
       </Content>
+
       <Footer>
         <Button title="Escolher periodo do aluguel" />
       </Footer>
