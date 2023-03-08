@@ -1,5 +1,6 @@
 import React from "react";
 import { StatusBar } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { RFValue } from "react-native-responsive-fontsize";
 
 import { Car } from "../../components/Car";
@@ -9,6 +10,8 @@ import Logo from "../../assets/logo.svg";
 import { Container, Header, TotalCars, HeaderContent, CarList } from "./styles";
 
 export function Home() {
+  const navigation = useNavigation<any>();
+
   const carDataOne = {
     brand: "Lamborghini",
     name: "Hurracan",
@@ -18,6 +21,11 @@ export function Home() {
     },
     thumbnail:
       "https://cutewallpaper.org/24/lamborghini-png/aventador-lamborghini-transparent-png-stickpng.png",
+  };
+
+  const handleCarDetails = () => {
+    console.log("Press");
+    navigation.navigate("CarDetails");
   };
 
   return (
@@ -36,7 +44,9 @@ export function Home() {
       <CarList
         data={[1, 2, 3, 4, 5, 6, 7, 8, 9]}
         keyExtractor={(item) => String(item)}
-        renderItem={({ item }) => <Car data={carDataOne} />}
+        renderItem={({ item }) => (
+          <Car data={carDataOne} onPress={handleCarDetails} />
+        )}
       />
     </Container>
   );

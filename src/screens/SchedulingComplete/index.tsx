@@ -1,5 +1,5 @@
 import React from "react";
-import { useWindowDimensions } from "react-native";
+import { useWindowDimensions, StatusBar } from "react-native";
 
 import { Container, Content, Title, Message, Footer } from "./styles";
 
@@ -12,6 +12,11 @@ export function SchedulingComplete() {
 
   return (
     <Container>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
       <LogoSvg width={width} />
 
       <Content>

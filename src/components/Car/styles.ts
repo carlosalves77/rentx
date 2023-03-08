@@ -1,7 +1,8 @@
-import { RFValue } from "react-native-responsive-fontsize";
 import styled from "styled-components/native";
+import { TouchableOpacity } from "react-native";
+import { RFValue } from "react-native-responsive-fontsize";
 
-export const Container = styled.TouchableOpacity`
+export const Container = styled(TouchableOpacity)`
   width: 100%;
   height: 126px;
 
@@ -17,7 +18,7 @@ export const Container = styled.TouchableOpacity`
 `;
 
 export const Title = styled.Text`
-  font-size: 25px;
+  font-size: ${RFValue(15)}px;
 `;
 
 export const Details = styled.View``;
@@ -25,7 +26,7 @@ export const Details = styled.View``;
 export const Brand = styled.Text`
   font-family: ${({ theme }) => theme.fonts.secondary_500};
   color: ${({ theme }) => theme.colors.text_detail};
-  font-size: ${RFValue(10)};
+  font-size: ${RFValue(10)}px;
   text-transform: uppercase;
 `;
 
@@ -49,7 +50,7 @@ export const Rent = styled.View`
 export const Period = styled.Text`
   font-family: ${({ theme }) => theme.fonts.secondary_500};
   color: ${({ theme }) => theme.colors.text_detail};
-  font-size: ${RFValue(10)};
+  font-size: ${RFValue(10)}px;
 
   text-transform: uppercase;
 `;
@@ -57,7 +58,7 @@ export const Period = styled.Text`
 export const Price = styled.Text`
   font-family: ${({ theme }) => theme.fonts.secondary_500};
   color: ${({ theme }) => theme.colors.main};
-  font-size: ${RFValue(15)};
+  font-size: ${RFValue(15)}px;
 `;
 
 export const Type = styled.View``;
