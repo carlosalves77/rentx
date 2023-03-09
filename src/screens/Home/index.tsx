@@ -23,10 +23,9 @@ export function Home() {
       "https://cutewallpaper.org/24/lamborghini-png/aventador-lamborghini-transparent-png-stickpng.png",
   };
 
-  const handleCarDetails = () => {
-    console.log("Press");
+  function handleCarDetails() {
     navigation.navigate("CarDetails");
-  };
+  }
 
   return (
     <Container>
