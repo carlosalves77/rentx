@@ -67,3 +67,9 @@ export const CarImage = styled.Image`
   width: 167px;
   height: 75px;
 `;
+
+export const FuelIcon = styled.Image`
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+`;
